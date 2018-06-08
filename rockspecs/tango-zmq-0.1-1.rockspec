@@ -1,8 +1,8 @@
-package = 'tango-ev'
-version = '0.1.1-1'
+package = 'tango-zmq'
+version = '0.1-1'
 source = {
    url = 'git://github.com/lipp/tango.git',
-   branch = '0.1.1'
+   branch = 'master'
 }
 description = {
    summary = 'Remote procedure calls (RPC) for Lua.',
@@ -11,8 +11,7 @@ description = {
 }
 dependencies = {
    'lua >= 5.1',
-   'luasocket >= 2.0.2',
-   'lua-ev'
+   'lua-zmq >= 1.0'
 }
 build = {
    type = 'builtin',
@@ -20,8 +19,7 @@ build = {
       ['tango.proxy'] = 'tango/proxy.lua',
       ['tango.dispatch'] = 'tango/dispatch.lua',
       ['tango.utils.serialization'] = 'tango/utils/serialization.lua',
-      ['tango.utils.socket_message'] = 'tango/utils/socket_message.lua',
-      ['tango.client.socket'] = 'tango/client/socket.lua',
-      ['tango.server.ev_socket'] = 'tango/server/ev_socket.lua'
+      ['tango.client.zmq'] = 'tango/client/zmq.lua',
+      ['tango.server.zmq'] = 'tango/server/zmq.lua'
    }
 }

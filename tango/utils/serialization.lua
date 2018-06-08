@@ -1,3 +1,4 @@
+-- private helpers
 local tinsert = table.insert
 local tconcat = table.concat
 local tremove = table.remove
@@ -16,7 +17,7 @@ local print = print
 -- Uses table serialization from http://lua/users.org/wiki/TableUtils and loadstring for unserialize.
 module('tango.utils.serialization')
 
-serialize = nil
+local serialize
 
 local converters = {
   string = function(v)
@@ -71,12 +72,9 @@ serialize =
     return '{'..tconcat(result,',')..'}'
   end
 
-unserialize = 
+local unserialize = 
   function(strtab)
     return loadstring('return '..strtab)()
   end
 
-return {
-  serialize = serialize,
-  unserialize = unserialize
-}
+return {serialize=serialize,unserialize=unserialize}

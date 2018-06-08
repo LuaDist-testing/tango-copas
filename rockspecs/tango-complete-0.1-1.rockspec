@@ -1,8 +1,8 @@
 package = 'tango-complete'
-version = '0.2.1-1'
+version = '0.1-1'
 source = {
    url = 'git://github.com/lipp/tango.git',
-   branch = '0.2.1'
+   branch = 'master'
 }
 description = {
    summary = 'Remote procedure calls (RPC) for Lua.',
@@ -19,10 +19,8 @@ dependencies = {
 build = {
    type = 'builtin',
    modules = {
-      ['tango'] = 'tango.lua',
       ['tango.proxy'] = 'tango/proxy.lua',
-      ['tango.dispatcher'] = 'tango/dispatcher.lua',
-      ['tango.config'] = 'tango/config.lua',
+      ['tango.dispatch'] = 'tango/dispatch.lua',
       ['tango.utils.serialization'] = 'tango/utils/serialization.lua',
       ['tango.utils.socket_message'] = 'tango/utils/socket_message.lua',
       ['tango.client.socket'] = 'tango/client/socket.lua',
