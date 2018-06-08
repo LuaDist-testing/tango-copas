@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = 'tango-copas'
-version = '0.1-2'
+version = '0.1.1-1'
 -- LuaDist source
 source = {
-  tag = "0.1-2",
+  tag = "0.1.1-1",
   url = "git://github.com/LuaDist-testing/tango-copas.git"
 }
 -- Original source
 -- source = {
 --    url = 'git://github.com/lipp/tango.git',
---    tag = '0.1',
+--    branch = '0.1.1'
 -- }
 description = {
    summary = 'Remote procedure calls (RPC) for Lua.',
